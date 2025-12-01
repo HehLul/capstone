@@ -1,0 +1,131 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.home-content {
+  max-width: 48rem;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-section {
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #bfdbfe;
+  margin-bottom: 0.5rem;
+}
+
+.hero-description {
+  font-size: 0.875rem;
+  color: #93c5fd;
+  margin-top: 0.5rem;
+}
+
+.search-section {
+  margin-bottom: 2rem;
+}
+
+.search-wrapper {
+  position: relative;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  border: 2px solid #60a5fa;
+  background-color: rgba(255, 255, 255, 0.95);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5);
+}
+
+.search-button {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #1d4ed8;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 28rem;
+  margin: 0 auto 2rem;
+}
+
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #bfdbfe;
+}
+
+.feature-icon {
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.feature-text {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.suggested-tickers {
+  font-size: 0.75rem;
+  color: #93c5fd;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 16rem;
+  }
+}

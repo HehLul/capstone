@@ -1,0 +1,380 @@
+/* Loading Screen */
+.loading-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.loading-content {
+  text-align: center;
+  max-width: 28rem;
+}
+
+.loading-spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 4px solid #60a5fa;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.loading-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.loading-stage {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.stage-complete {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+}
+
+.stage-active {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.stage-pending {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: #9ca3af;
+}
+
+/* Stock Details */
+.stock-details-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+  padding: 1rem;
+}
+
+.stock-details-content {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #93c5fd;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.back-button:hover {
+  color: #bfdbfe;
+}
+
+.header-info {
+  text-align: right;
+}
+
+.live-label {
+  color: #bfdbfe;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.update-time {
+  color: #93c5fd;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+/* Main Card */
+.details-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stock-ticker {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.stock-name {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin: 0 0 0.5rem 0;
+}
+
+.stock-price {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0.5rem 0 0 0;
+}
+
+.sentiment-badge {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.sentiment-badge.sentiment-bullish {
+  background-color: #dcfce7;
+}
+
+.sentiment-badge.sentiment-neutral {
+  background-color: #dbeafe;
+}
+
+.sentiment-badge.sentiment-bearish {
+  background-color: #fee2e2;
+}
+
+.sentiment-score-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sentiment-score {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+.sentiment-bullish .sentiment-score,
+.sentiment-bullish svg {
+  color: #16a34a;
+}
+
+.sentiment-neutral .sentiment-score,
+.sentiment-neutral svg {
+  color: #2563eb;
+}
+
+.sentiment-bearish .sentiment-score,
+.sentiment-bearish svg {
+  color: #dc2626;
+}
+
+.sentiment-label {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.stat-label {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0;
+}
+
+.stat-value.sentiment-bullish {
+  color: #16a34a;
+}
+
+.stat-value.sentiment-neutral {
+  color: #2563eb;
+}
+
+.stat-value.sentiment-bearish {
+  color: #dc2626;
+}
+
+.stat-value.prediction-positive {
+  color: #16a34a;
+}
+
+.stat-value.prediction-negative {
+  color: #dc2626;
+}
+
+/* Summary Section */
+.summary-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.summary-text {
+  color: #374151;
+  line-height: 1.625;
+  margin: 0;
+}
+
+/* Trend Section */
+.trend-section {
+  margin-bottom: 1.5rem;
+}
+
+.trend-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 8rem;
+  margin-top: 1rem;
+}
+
+.trend-bar-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.trend-bar {
+  width: 100%;
+  border-radius: 0.25rem 0.25rem 0 0;
+  transition: all 0.3s;
+}
+
+.trend-bar.sentiment-bullish {
+  background-color: #22c55e;
+}
+
+.trend-bar.sentiment-neutral {
+  background-color: #3b82f6;
+}
+
+.trend-bar.sentiment-bearish {
+  background-color: #ef4444;
+}
+
+.trend-value {
+  font-size: 0.75rem;
+  color: #4b5563;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Keywords Section */
+.keywords-section {
+  margin-bottom: 0;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.keyword-tag {
+  padding: 0.5rem 1rem;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Disclaimer */
+.disclaimer {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #92400e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .details-card {
+    padding: 1.5rem;
+  }
+
+  .stock-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sentiment-badge {
+    width: 100%;
+  }
+
+  .stock-ticker {
+    font-size: 1.875rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
